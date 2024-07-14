@@ -1,0 +1,57 @@
+Branch: 'Master'
+
+pathes:
+    DATA: '/data'                 # not used yet
+    LOG: '/log'
+    RRD: '/rrd'
+    YML: '/yml'
+    PNG: '/png'
+    ARCH: '/archiv'
+    SCENE: '/Scenes'
+    PROG: '/prog'
+    HTML: '/html'
+    IPAdr: '/IPAdr'
+    TEMPLATE: '/progs/templates'
+
+    
+Communication:
+    DevServerName: 'Family.local'    
+    DaBoServerName: 'Family.local'    
+    DevServerPort: 8080
+    DaBoServerPort: 8088
+    ShellyMeter: 'http://192.168.2.136/meter/0'
+
+Timers:
+    ShellyMeterSleep: 60
+    
+DevServer:
+    Timers:
+        MonitoringSleep: 1
+
+files:
+    DATASTORE_YML: 'datastore.yml'
+    DIAGRAMS_YML: 'diagrams.yml'
+
+suffixes:
+    log: # '-%Y_%m_%d__%H-%M-%S'     #date and time
+         '-%Y_%m_%d'                #date only
+         #''                         # hostname only
+    data: '-%Y_%m_%d__%H-%M-%S'     #date and time
+          #'-%Y_%m_%d'               #date only
+          #''                        #without date and time
+
+misc:
+    humanTimestamp: True
+    
+debug:
+    datefmt: '%d.%m.%Y %H:%M:%S'      # normal
+    #datefmt: '%d.%m.%Y %H:%M:%S.%s'   # fine (with ms)
+    hirestime: False                    # time resolution in data logs (true=ms, false=s)
+    humanTimestamp: True
+    logYML: True                      #put the yml-file into the log
+    verbose: True
+    Mailing: True
+
+devices:
+    
+archive:
